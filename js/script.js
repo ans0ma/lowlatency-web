@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
 /* ══ Terminal ══ */
 const LINES = [
     { prefix: '>', text: 'INIT SECURED TUNNEL', hi: false },
-    { prefix: '>', text: 'PROTOCOL: HYSTERIA 2 + VLESS REALITY', hi: false },
+    { prefix: '>', text: 'PROTOCOL: HY2 + VLESS REALITY', hi: false },
     { prefix: '>', text: 'DPI-BYPASS: ENABLED', hi: false },
     { prefix: '[AUTH]', text: 'auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
     { prefix: '[NET]', text: 'UDP MTU probing... 1390 bytes', hi: false },
@@ -32,7 +32,7 @@ const LINES = [
     { prefix: '[XTLS]', text: 'Reality handshake verified', hi: false },
     { prefix: '[NET]', text: 'Handshake success (RTT: 12ms)', hi: false },
     { prefix: '[SYS]', text: 'Bandwidth allocation: 10Gbps', hi: false },
-    { prefix: '>', text: 'STATUS: LOWLATENCY VPN SECURED', hi: true },
+    { prefix: '>', text: 'STATUS: LL VPN SECURED', hi: true },
 ];
 const term = document.getElementById('terminal');
 
