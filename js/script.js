@@ -24,15 +24,15 @@ window.addEventListener('scroll', () => {
 const LINES = [
     { prefix: '>', text: 'INIT SECURED TUNNEL', hi: false },
     { prefix: '>', text: 'PROTOCOL: HYSTERIA 2 + VLESS REALITY', hi: false },
-    { prefix: '>', text: 'PORT HOPPING: ENABLED', hi: false },
-    { prefix: '[SYS]', text: 'Authenticating with auth.ll-corp.xyz... <span class="t-ok">OK</span>', hi: false },
+    { prefix: '>', text: 'DPI-BYPASS: ENABLED', hi: false },
+    { prefix: '[SYS]', text: 'Authenticating with auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
     { prefix: '[NET]', text: 'UDP MTU probing... 1390 bytes', hi: false },
     { prefix: '[BBR]', text: 'Congestion control initialized', hi: false },
-    { prefix: '[SEC]', text: 'ChaCha20-Poly1305 cipher active', hi: false },
+    { prefix: '[SEC]', text: 'CIPHER ACTIVE', hi: false },
     { prefix: '[XTLS]', text: 'Reality handshake verified', hi: false },
     { prefix: '[NET]', text: 'Handshake success (RTT: 12ms)', hi: false },
     { prefix: '[SYS]', text: 'Bandwidth allocation: 10Gbps link', hi: false },
-    { prefix: '>', text: 'STATUS: LL VPN SECURED', hi: true },
+    { prefix: '>', text: 'STATUS: LOWLATENCY VPN SECURED', hi: true },
 ];
 const term = document.getElementById('terminal');
 
