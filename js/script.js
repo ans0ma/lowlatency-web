@@ -25,13 +25,13 @@ const LINES = [
     { prefix: '>', text: 'INIT SECURED TUNNEL', hi: false },
     { prefix: '>', text: 'PROTOCOL: HYSTERIA 2 + VLESS REALITY', hi: false },
     { prefix: '>', text: 'DPI-BYPASS: ENABLED', hi: false },
-    { prefix: '[SYS]', text: 'Auth with auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
+    { prefix: '[AUTH]', text: 'auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
     { prefix: '[NET]', text: 'UDP MTU probing... 1390 bytes', hi: false },
     { prefix: '[BBR]', text: 'Congestion control initialized', hi: false },
-    { prefix: '[SEC]', text: 'CIPHER ACTIVE', hi: false },
+    { prefix: '[SEC]', text: 'ENCRYPTION LAYER ACTIVE', hi: false },
     { prefix: '[XTLS]', text: 'Reality handshake verified', hi: false },
     { prefix: '[NET]', text: 'Handshake success (RTT: 12ms)', hi: false },
-    { prefix: '[SYS]', text: 'Bandwidth allocation: 10Gbps link', hi: false },
+    { prefix: '[SYS]', text: 'Bandwidth allocation: 10Gbps', hi: false },
     { prefix: '>', text: 'STATUS: LOWLATENCY VPN SECURED', hi: true },
 ];
 const term = document.getElementById('terminal');
