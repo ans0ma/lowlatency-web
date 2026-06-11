@@ -12,8 +12,8 @@
     --text-dim: #3a5550;
     --white: #e8f5f0;
     /* Если захочешь вернуть старый шрифт в консоль, просто замени строку ниже на: 'Space Mono', monospace; */
-    --mono: 'Syne', sans-serif;
-    --sans: 'Syne', sans-serif;
+    --mono: 'Unbounded', sans-serif;
+    --sans: 'Unbounded', sans-serif;
 }
 
 *,
@@ -29,7 +29,7 @@ body {
     background: var(--bg-deep);
     color: var(--text-base);
     font-family: var(--sans);
-    font-weight: 500;
+    font-weight: 400;
     scroll-behavior: smooth;
 }
 
@@ -356,7 +356,7 @@ nav#nav.scrolled {
     gap: 10px;
     padding: 14px 16px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--white);
     text-decoration: none;
     background: rgba(255, 255, 255, .02);
@@ -415,7 +415,7 @@ section:not(#hero)::before {
     background: rgba(62, 207, 142, .07);
     border: 1px solid rgba(62, 207, 142, .2);
     border-radius: 100px;
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-weight: 700;
     font-size: 12px;
     color: var(--green-main);
@@ -446,22 +446,26 @@ section:not(#hero)::before {
 }
 
 .hero-sub-title {
-    font-family: var(--mono);
-    font-weight: 700;
-    font-size: clamp(14px, 2vw, 18px);
-    color: var(--green-mid);
-    letter-spacing: .12em;
-    margin-bottom: 28px;
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(24px, 4vw, 48px);
+    color: var(--white);
+    letter-spacing: normal;
+    margin-bottom: 32px;
     animation: fadeUp .7s .1s ease both;
 }
 
+.hero-sub-title .accent {
+    color: var(--green-main);
+}
+
 .hero-title {
-    font-size: clamp(32px, 8vw, 96px);
-    font-weight: 800;
-    line-height: 1.0;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.2;
     letter-spacing: -.02em;
     color: var(--white);
-    margin-bottom: 8px;
+    margin-bottom: 24px;
     animation: fadeUp .7s .15s ease both;
     word-wrap: break-word;
 }
@@ -477,7 +481,7 @@ section:not(#hero)::before {
     color: var(--text-muted);
     margin-bottom: 48px;
     animation: fadeUp .7s .22s ease both;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .hero-desc strong {
@@ -509,9 +513,9 @@ section:not(#hero)::before {
     align-items: center;
     gap: 9px;
     padding: 14px 32px;
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-size: 15px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: .06em;
     border-radius: 8px;
     cursor: pointer;
@@ -598,7 +602,7 @@ section:not(#hero)::before {
 .terminal-title {
     margin: 0 auto;
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-dim);
     letter-spacing: .05em;
 }
@@ -610,6 +614,7 @@ section:not(#hero)::before {
     line-height: 2.0;
     color: #4d9e7a;
     height: 380px;
+    letter-spacing: .01em;
     overflow: hidden;
     word-break: break-word;
     text-align: left;
@@ -631,7 +636,7 @@ section:not(#hero)::before {
 
 .t-highlight {
     color: var(--green-bright);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .t-cursor-line {
@@ -783,7 +788,7 @@ section:not(#hero)::before {
 
 .section-desc {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.85;
     color: var(--text-muted);
     max-width: 640px;
@@ -857,6 +862,7 @@ section:not(#hero)::before {
     margin: 0 auto 20px auto;
     font-size: 22px;
     transition: all 0.3s ease;
+    color: var(--white);
 }
 
 .feature-card:hover .feature-icon {
@@ -874,14 +880,14 @@ section:not(#hero)::before {
 
 .feature-title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--white);
     margin-bottom: 10px;
 }
 
 .feature-text {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.7;
     color: var(--text-muted);
 }
@@ -922,7 +928,7 @@ section:not(#hero)::before {
 
 .proto-desc {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.7;
     color: var(--text-muted);
 }
@@ -993,7 +999,7 @@ section:not(#hero)::before {
 
 .step-text {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.7;
     color: var(--text-muted);
 }
@@ -1081,7 +1087,7 @@ section:not(#hero)::before {
 
 .plan-features li {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-muted);
     display: flex;
     align-items: center;
@@ -1160,7 +1166,7 @@ footer::before {
 
 .footer-links a {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-muted);
     text-decoration: none;
     transition: color .2s;
@@ -1178,7 +1184,7 @@ footer::before {
     font-size: 12px;
     color: var(--text-dim);
     letter-spacing: .06em;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
 }
 
