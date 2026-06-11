@@ -25,7 +25,7 @@ const LINES = [
     { prefix: '>', text: 'INIT SECURED TUNNEL', hi: false },
     { prefix: '>', text: 'PROTOCOL: HYSTERIA 2 + VLESS REALITY', hi: false },
     { prefix: '>', text: 'DPI-BYPASS: ENABLED', hi: false },
-    { prefix: '[SYS]', text: 'Authenticating with auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
+    { prefix: '[SYS]', text: 'Auth with auth.lowlatency.me... <span class="t-ok">OK</span>', hi: false },
     { prefix: '[NET]', text: 'UDP MTU probing... 1390 bytes', hi: false },
     { prefix: '[BBR]', text: 'Congestion control initialized', hi: false },
     { prefix: '[SEC]', text: 'CIPHER ACTIVE', hi: false },
@@ -56,12 +56,12 @@ function tick() {
 setTimeout(tick, 500);
 
 /* ══ ВЫДЕЛЕНИЕ ГРАНИЦЫ КАРТОЧЕК ПРИ НАВЕДЕНИИ ══ */
-document.querySelectorAll('.glow-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const r = card.getBoundingClientRect();
-        const x = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
-        const y = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
-        card.style.setProperty('--mx', x);
-        card.style.setProperty('--my', y);
-    });
-});
+// document.querySelectorAll('.glow-card').forEach(card => {
+//     card.addEventListener('mousemove', e => {
+//         const r = card.getBoundingClientRect();
+//         const x = ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%';
+//         const y = ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%';
+//         card.style.setProperty('--mx', x);
+//         card.style.setProperty('--my', y);
+//     });
+// });
