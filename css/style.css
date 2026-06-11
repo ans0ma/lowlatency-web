@@ -1212,9 +1212,9 @@ footer::before {
 }
 
 /* ════════════════════════════════
-     MOBILE ≤ 760px
+     MOBILE ≤ 1024px
   ════════════════════════════════ */
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
     .nav-container {
         padding: 0 20px;
     }
