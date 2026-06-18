@@ -44,7 +44,7 @@ body {
 
 .page-wrapper::before {
     content: '';
-    position: absolute;
+    position: fixed;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
     background-size: 200px 200px;
@@ -54,7 +54,7 @@ body {
 }
 
 .grid-bg {
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 0;
     background-image:
@@ -66,7 +66,7 @@ body {
 }
 
 .orb {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     filter: blur(120px);
     pointer-events: none;
@@ -141,54 +141,12 @@ nav#nav.scrolled {
     /* Раздувается */
 }
 
-.nav-logo .logo-icon {
-    display: flex;
-    gap: 3px;
-    align-items: flex-end;
-}
+.nav-logo .logo-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 
-.nav-logo .bar {
-    width: 4px;
-    background: var(--green-main);
-    border-radius: 2px;
-    animation: pulse-bar 2s ease-in-out infinite;
-}
-
-.nav-logo .bar:nth-child(1) {
-    height: 12px;
-    animation-delay: 0s;
-}
-
-.nav-logo .bar:nth-child(2) {
-    height: 18px;
-    animation-delay: .2s;
-}
-
-.nav-logo .bar:nth-child(3) {
-    height: 14px;
-    animation-delay: .4s;
-}
-
-.nav-logo .bar:nth-child(4) {
-    height: 20px;
-    animation-delay: .1s;
-}
-
-.nav-logo .bar:nth-child(5) {
-    height: 10px;
-    animation-delay: .3s;
-}
-
-@keyframes pulse-bar {
-
-    0%,
-    100% {
-        opacity: 1
-    }
-
-    50% {
-        opacity: .4
-    }
+    transition: transform 0.3s ease;
 }
 
 .nav-logo .accent {
@@ -242,7 +200,7 @@ nav#nav.scrolled {
     color: var(--text-muted);
     text-decoration: none;
     border-radius: 8px;
-    transition: all .2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: all .3s cubic-bezier(0.2, 0.8, 0.2, 1);
     white-space: nowrap;
 }
 
@@ -853,7 +811,7 @@ section:not(#hero)::before {
     margin: 0 auto 20px auto;
     font-size: 22px;
     transition: all 0.3s ease;
-    color: var(--white);
+    color: var(--green-main);
 }
 
 .feature-card:hover .feature-icon {
@@ -865,7 +823,7 @@ section:not(#hero)::before {
 }
 
 .feature-card:hover .feature-icon svg {
-    stroke: var(--green-main);
+    stroke: var(--green-bright);
     /* filter: drop-shadow(0 0 8px var(--green-main)); */
 }
 
@@ -881,67 +839,6 @@ section:not(#hero)::before {
     font-weight: 400;
     line-height: 1.7;
     color: var(--text-muted);
-}
-
-/* PROTOCOLS - ОБЫЧНЫЙ ХОВЕР С 2px ОБВОДКОЙ */
-.protocols-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    width: 100%;
-}
-
-.proto-card {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 14px;
-    background: var(--bg-panel);
-    border: 2px solid var(--border);
-    border-radius: 14px;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-}
-
-.proto-card:hover {
-    border-color: var(--green-main);
-    box-shadow: 0 0 25px rgba(62, 207, 142, .15);
-    transform: translateY(-3px);
-}
-
-.proto-name {
-    font-family: var(--mono);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--green-main);
-}
-
-.proto-desc {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.7;
-    color: var(--text-muted);
-}
-
-.proto-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-}
-
-/* Текст тегов стал более зеленым */
-.proto-tag {
-    font-family: var(--mono);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 4px 10px;
-    background: rgba(62, 207, 142, .07);
-    border: 1px solid rgba(62, 207, 142, .15);
-    border-radius: 4px;
-    color: var(--green-main);
-    letter-spacing: .05em;
 }
 
 /* HOW IT WORKS - ОБЫЧНЫЙ ХОВЕР С 2px ОБВОДКОЙ */
@@ -993,6 +890,25 @@ section:not(#hero)::before {
     font-weight: 400;
     line-height: 1.7;
     color: var(--text-muted);
+}
+
+.inline-bot-link {
+    color: var(--green-main);
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    /* Делает линию прерывистой */
+    text-decoration-thickness: 1px;
+    /* Задает толщину в 1 пиксель */
+    text-underline-offset: 3px;
+    /* Делает красивый отступ линии от текста */
+    transition: color 0.2s ease;
+}
+
+.inline-bot-link:hover {
+    color: var(--green-bright);
+    /* При наведении цвет станет чуть ярче, как у кнопок */
+    text-decoration-style: solid;
+    /* Линия становится цельной */
 }
 
 /* PRICING - ОБЫЧНЫЙ ХОВЕР С 2px ОБВОДКОЙ */
@@ -1200,6 +1116,19 @@ footer::before {
 
 .author-link:hover {
     text-shadow: none;
+}
+
+/* ══ КАСТОМНОЕ ВЫДЕЛЕНИЕ ТЕКСТА ══ */
+::selection {
+    background: var(--green-main);
+    color: var(--bg-deep);
+    /* Темный цвет текста для идеального контраста */
+}
+
+/* Для поддержки старых версий Firefox */
+::-moz-selection {
+    background: var(--green-main);
+    color: var(--bg-deep);
 }
 
 /* ════════════════════════════════
