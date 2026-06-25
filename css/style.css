@@ -11,7 +11,6 @@
     --text-muted: #6b8880;
     --text-dim: #3a5550;
     --white: #e8f5f0;
-    /* Если захочешь вернуть старый шрифт в консоль, просто замени строку ниже на: 'Space Mono', monospace; */
     --mono: 'Unbounded', sans-serif;
     --sans: 'Unbounded', sans-serif;
 }
@@ -196,7 +195,7 @@ nav#nav.scrolled {
     gap: 8px;
     padding: 10px 12px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-muted);
     text-decoration: none;
     border-radius: 8px;
@@ -207,8 +206,8 @@ nav#nav.scrolled {
 /* Подпрыгивает вся кнопка целиком */
 .nav-links a:hover {
     color: var(--green-main);
-    background: rgba(62, 207, 142, .06);
-    transform: translateY(-3px);
+    background: rgba(62, 207, 142, .00);
+    /* transform: translateY(-3px); */
 }
 
 .nav-links a::after {
@@ -227,18 +226,18 @@ nav#nav.scrolled {
 
 .nav-links a:hover::after {
     transform: scaleX(1);
-    opacity: 1;
+    opacity: 0;
 }
 
 .nav-links a.active {
     color: var(--green-main);
-    background: rgba(62, 207, 142, .06);
+    background: rgba(62, 207, 142, .00);
 }
 
 /* Фиксируем нижнее подчеркивание */
 .nav-links a.active::after {
     transform: scaleX(1);
-    opacity: 1;
+    opacity: 0;
 }
 
 .nav-burger {
@@ -727,7 +726,7 @@ section:not(#hero)::before {
     transform: translateX(-50%);
     width: 100%;
     max-width: 500px;
-    height: 2px;
+    height: 1px;
     background: linear-gradient(90deg, transparent, var(--green-main), transparent);
     pointer-events: none;
 }
@@ -796,7 +795,7 @@ section:not(#hero)::before {
 
 .feature-card {
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     /* Толщина как в остальных карточках */
     border-radius: 14px;
     padding: 36px 32px;
@@ -822,7 +821,7 @@ section:not(#hero)::before {
     width: 48px;
     height: 48px;
     background: rgba(62, 207, 142, .07);
-    border: 2px solid rgba(62, 207, 142, .15);
+    border: 1px solid rgba(62, 207, 142, .15);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -875,7 +874,7 @@ section:not(#hero)::before {
     text-align: center;
     padding: 32px 24px;
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 14px;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -949,7 +948,7 @@ section:not(#hero)::before {
     text-align: center;
     gap: 10px;
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 14px;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -1062,7 +1061,7 @@ footer::before {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 1px;
+    height: 0px;
     background: linear-gradient(90deg, transparent, var(--border) 20%, var(--border) 80%, transparent);
     pointer-events: none;
 }
@@ -1158,7 +1157,7 @@ footer::before {
 
 .footer-col-links a:hover {
     color: var(--green-main);
-    transform: translateX(3px);
+    /* transform: translateX(3px); */
 }
 
 /* Нижняя часть футера */
@@ -1228,7 +1227,7 @@ footer::before {
     border-color: var(--green-bright);
     color: var(--green-bright);
     background: rgba(62, 207, 142, .05);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(62, 207, 142, 0.1);
 }
 
@@ -1544,7 +1543,7 @@ body.modal-open {
     .features-grid,
     .pricing-grid,
     .protocols-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr !important;
     }
 
     .step {
@@ -1608,5 +1607,14 @@ body.modal-open {
 
     .contacts-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    .terminal-body {
+        height: 380px;
+        font-size: 12px;
+        padding: 14px 16px;
+        line-height: 1.9;
     }
 }
