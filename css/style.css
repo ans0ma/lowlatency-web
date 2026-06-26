@@ -796,7 +796,7 @@ section:not(#hero)::before {
 
 .feature-card {
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     /* Толщина как в остальных карточках */
     border-radius: 14px;
     padding: 36px 32px;
@@ -822,7 +822,7 @@ section:not(#hero)::before {
     width: 48px;
     height: 48px;
     background: rgba(62, 207, 142, .07);
-    border: 2px solid rgba(62, 207, 142, .15);
+    border: 1px solid rgba(62, 207, 142, .15);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -875,7 +875,7 @@ section:not(#hero)::before {
     text-align: center;
     padding: 32px 24px;
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 14px;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -949,7 +949,7 @@ section:not(#hero)::before {
     text-align: center;
     gap: 10px;
     background: var(--bg-panel);
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 14px;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -1544,7 +1544,7 @@ body.modal-open {
     .features-grid,
     .pricing-grid,
     .protocols-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr !important;
     }
 
     .step {
@@ -1608,5 +1608,14 @@ body.modal-open {
 
     .contacts-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .terminal-body {
+        height: 230px;
+        font-size: 12px;
+        padding: 14px 16px;
+        line-height: 1.9;
     }
 }
