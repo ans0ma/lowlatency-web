@@ -1611,7 +1611,7 @@ body.modal-open {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .terminal-body {
         height: 230px;
         font-size: 12px;
